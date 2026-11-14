@@ -73,3 +73,9 @@ nav, p, section, article {
     width: 125px;
     margin-left: 10px;
 }
+
+#hero img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
