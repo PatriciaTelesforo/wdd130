@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-font: Arial, sans-serif;
     --heading-font: Arial, sans-serif;
@@ -8,11 +14,8 @@
 
 body {
     font-family: var(--primary-font);
-    margin: 0;
-    padding: 0;
     background-color: var(--background-color);
     color: var(--primary-color);
-    box-sizing: border-box;
 }
 
 header {
@@ -56,21 +59,35 @@ h2 {
     font-size: 1.5em;
 }
 
-#hero {
+.hero {
+    position: relative;
     width: 100%;
     text-align: center;
-    position: relative;
     margin-bottom: 20px;
-    clear: both;
-    display: block;
-    float: none;
 }
 
-#hero img {
+.hero img {
     width: 100%;
-    max-height: 350px;
+    max-height: 400px;
     object-fit: cover;
     display: block;
+}
+
+.hero h1, .hero article {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+.hero article img {
+    float: right;
+    margin-left: 15px;
+    max-width: 200px;
+    height: auto;
 }
 
 main, .mission, .about-us {
@@ -79,8 +96,6 @@ main, .mission, .about-us {
     padding: 20px;
     background: #fff;
     clear: both;
-    display: block;
-    float: none;
 }
 
 .about-us img, .mission img {
@@ -96,9 +111,8 @@ main, .mission, .about-us {
     clear: both;
 }
 
-#social a, .social a, .social-icons a, .socialmedia a {
-    display: inline-block;
-    margin: 0 10px;
+#social a, .social a, .social-icons a, .socialmedia a, nav a, footer a {
+    text-decoration: none;
 }
 
 #social img, .social img, .social-icons img, .socialmedia img {
@@ -106,6 +120,7 @@ main, .mission, .about-us {
     height: 30px;
     object-fit: contain;
     display: inline-block;
+    margin: 0 10px;
 }
 
 footer {
