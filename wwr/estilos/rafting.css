@@ -72,3 +72,7 @@ nav, p, section, article {
     width: 125px;
     margin-left: 10px;
 }
+
+.socialmedia a {
+    text-decoration: none;
+}
