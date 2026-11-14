@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--background-color);
+    font-family: var(--primary-font);
     color: var(--secondary-color);
 }
 
