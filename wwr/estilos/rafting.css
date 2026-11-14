@@ -79,3 +79,16 @@ nav, p, section, article {
     max-height: 350px;
     object-fit: cover;
 }
+
+.about-us, .mission-container, section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-us img, .mission-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
