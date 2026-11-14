@@ -1,15 +1,9 @@
 :root {
-    --fonte-body: Arial, sans-serif;
-    --fonte-titulo: Georgia, serif;
-    --cor-primaria: #0056b3;
-    --cor-destaque1: #333333;
-    --cor-fundo: #f4f4f4;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --primary-font: Arial, sans-serif;
+    --heading-font: Arial, sans-serif;
+    --primary-color: #333;
+    --secondary-color: #444;
+    --background-color: #f9f9f9;
 }
 
 body {
@@ -96,18 +90,18 @@ main, .mission, .about-us {
     margin: 10px 0;
 }
 
-.social, .social-icons, .socialmedia {
+#social, .social, .social-icons, .socialmedia {
     text-align: center;
     padding: 20px;
     clear: both;
 }
 
-.social a, .social-icons a, .socialmedia a {
+#social a, .social a, .social-icons a, .socialmedia a {
     display: inline-block;
     margin: 0 10px;
 }
 
-.social img, .social-icons img, .socialmedia img {
+#social img, .social img, .social-icons img, .socialmedia img {
     width: 30px;
     height: 30px;
     object-fit: contain;
