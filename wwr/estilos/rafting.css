@@ -1,9 +1,17 @@
 :root {
-    --cor-primaria: #0056b3;
-    --cor-destaque1: #333333;
-    --cor-fundo: #f4f4f4;
-    --fonte-body: Arial, sans-serif;
-    --fonte-titulo: Georgia, serif;
+    --primary-color: #0056b3;
+    --secondary-color: #333333;
+    --background-color: #f4f4f4;
+    --primary-font: Arial, sans-serif;
+    --heading-font: Georgia, serif;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
 }
 
 * {
