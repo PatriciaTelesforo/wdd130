@@ -1,28 +1,12 @@
 :root {
-    --cor-primaria: #0056b3;
-    --cor-destaque1: #333333;
-    --cor-fundo: #f4f4f4;
-    --fonte-body: Arial, sans-serif;
+    --cor-primaria: #0b4f6c;
+    --cor-secundaria: #01baef;
+    --cor-texto: #1f2933;
+    --cor-fundo: #f4f7f9;
+    --cor-superficie: #ffffff;
+    --cor-borda: #cbd5e1;
     --fonte-titulo: Georgia, serif;
-}
-
-body {
-    font-family: var(--fonte-body);
-    background-color: var(--cor-fundo);
-    color: var(--cor-destaque1);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-primaria);
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-nav a, footer a, .socialmedia a {
-    text-decoration: none;
+    --fonte-corpo: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -32,62 +16,218 @@ nav a, footer a, .socialmedia a {
 }
 
 body {
-    font-family: var(--fonte-body);
-    color: var(--cor-destaque1);
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
-header, main, footer {
-    width: 840px;
+header,
+main,
+footer {
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
-h1, h2 {
+/* Cabeçalho com Grid e Navegação com Flex */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    background-color: var(--cor-superficie);
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+header img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+nav a:hover {
+    color: var(--cor-superficie);
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+}
+
+/* Títulos e parágrafos */
+h1,
+h2 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
     text-align: center;
+    margin-bottom: 14px;
 }
 
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+h1 {
+    font-size: 2rem;
 }
 
-.redes-sociais a {
-    text-decoration: none;
+h2 {
+    font-size: 1.5rem;
 }
 
+p {
+    margin-bottom: 14px;
+    color: var(--cor-texto);
+}
+
+/* Bloco Hero sem sobreposição */
 .hero {
-    position: relative;
+    background-color: var(--cor-superficie);
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    text-align: center;
 }
 
 .hero img {
     display: block;
     width: 100%;
+    max-width: 820px;
     height: auto;
+    margin: 0 auto 18px auto;
+    border-radius: 6px;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
+.hero p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Seção História */
+.historia {
+    background-color: var(--cor-superficie);
+    padding: 24px 20px;
+    margin-bottom: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+}
+
+.historia p {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.historia img {
+    display: block;
     width: 100%;
-    padding: 16px;
+    max-width: 420px;
+    height: auto;
+    margin: 18px auto;
+    border-radius: 6px;
+}
+
+/* Seção Aventuras (5 imagens alinhadas) */
+.aventuras {
+    background-color: var(--cor-superficie);
+    padding: 24px 20px;
+    margin-bottom: 24px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+}
+
+.aventuras figure {
+    display: block;
+    max-width: 720px;
+    margin: 0 auto 24px auto;
+    padding: 14px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--cor-destaque1);
-    color: #fff;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 15px;
+.aventuras figure:last-child {
+    margin-bottom: 0;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 10px;
+.aventuras img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
+}
+
+.aventuras figcaption {
+    font-family: var(--fonte-titulo);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--cor-primaria);
+    margin-bottom: 6px;
+}
+
+.aventuras figure p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    background-color: var(--cor-superficie);
+    border-top: 3px solid var(--cor-primaria);
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.redes-sociais a {
+    display: inline-block;
+    padding: 0;
+    background-color: transparent;
+}
+
+.redes-sociais a:hover {
+    background-color: transparent;
+}
+
+.redes-sociais img {
+    width: 28px;
+    height: 28px;
+    display: block;
 }
